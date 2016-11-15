@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <div ng-App ="ButtonApp" class="container">
-    	<button 
-     
+  <body ng-App ="ButtonApp">
+    <div class="container" ng-controller="CountController">
+    	<button class="button" ng-click="incrementCount()" >{{ count }} <ng-pluralize count="count" when="{'1':'like', 'other':'likes'}"></ng-pluralize>
+    	</button>
+    	<button class="button" ng-click= "toggleMethod()"  >{{ text }} 
+    	</button>
+    	
     </div>
     <script src="js/bundle.js"></script>
   </body>
